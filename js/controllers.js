@@ -2,7 +2,7 @@ var app = angular.module("movieSearch");
 app.controller('searchController', function($scope, $http) {
   $scope.findMovie = function() {
     $http.get('http://www.omdbapi.com/?s='+ $scope.userSearch +'&y=&plot=short&r=json').then(function(data) {
-      console.log(data.data.Search);
+      console.log(data.data);
       $scope.titles = data.data.Search;
     })
   }
