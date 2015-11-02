@@ -1,18 +1,20 @@
 <div ng-controller="searchController">
   <div class="row">
     <form class="col-lg-10 col-lg-offset-1" ng-submit="findMovie()">
-      <input type="text" name="userSearch" ng-model="userSearch" />
-      <p>Search for media type...</p>
+      <input type="text" name="userSearch" ng-model="userSearch"/>
+      <p>Search by media type...</p>
       <label for="movie">Movie</label>
-      <input type="radio" id="movie" name="type[movie]" value="movie" />
-
-      <label for="TV"></label>
-      <input type="submit" class="btn btn-primary" />
+      <input type="radio" id="movie" ng-value="'movie'" ng-model="media.type" name="type"/>
+      <label for="series">Series</label>
+      <input type="radio" id="series" ng-value="'series'" ng-model="media.type" name="type"/>
+      <label for="episode">Episode</label>
+      <input type="radio" id="episode" ng-value="'episode'" ng-model="media.type" name="type">
+      <input type="submit" class="btn btn-success"/>
     </form>
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-4 panel panel-info" ng-repeat="title in titles">
+      <div class="col-lg-4 panel panel-success" ng-repeat="title in titles">
         <div class="panel-heading">
           <p class="panel-title"><a href="/#/{{title.imdbID}}/show">{{ title.Title }}</a></p>
         </div>
