@@ -1,15 +1,17 @@
-<a href="/#/" class="btn btn-primary">Search</a>
+<a href="/#/" class="btn btn-primary">Go Back</a>
+
 
 <div ng-controller="showController">
-      <p> {{ movie.Title }}</p>
-      <img ng-src="{{ movie.Poster }}" alt="poster picture">
-      <p> {{ movie.Year }}</p>
-      <p> {{ movie.Rated }}</p>
-      <p> {{ movie.Runtime }}</p>
-      <p> {{ movie.Genre }}</p>
-      <p> {{ movie.Actors}}</p>
-      <p>{{ movie.Writer}}</p>
-      <p> {{ movie.Plot }}</p>
-      <p> {{ movie.Awards}}</p>
-      <p> {{ movie.imdbRating }}, of {{movie.imdbVotes }} votes.</p>
+  <p> {{ movie.Title }}</p>
+  <img ng-src="{{ movie.Poster }}" alt="poster picture">
+  <p> {{ movie.Year }}</p>
+  <p> {{ movie.Rated }}</p>
+  <p> {{ movie.Runtime }}</p>
+  <p> {{ movie.Genre }}</p>
+  <p> {{ movie.Actors}}</p>
+  <p>{{ movie.Writer}}</p>
+  <p> {{ movie.Plot }}</p>
+  <p> {{ movie.Awards}}</p>
+  <p> {{ movie.imdbRating }}, of {{movie.imdbVotes }} votes on imdb</p>
+  <img ng-src="{{ giphy }}" />
 </div>
